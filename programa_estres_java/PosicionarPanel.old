@@ -1,0 +1,24 @@
+import javax.swing.*;
+import java.awt.Color;
+
+public class PosicionarPanel {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Posición Absoluta");
+        frame.setSize(400, 400);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        // 1. Usar diseño nulo para posicionamiento absoluto
+        frame.setLayout(null);
+
+        JPanel panel = new JPanel();
+        panel.setBackground(Color.RED);
+        
+        // 2. Definir posición (x=50, y=100) y tamaño (ancho=150, alto=100)
+        panel.setBounds(50, 100, 150, 100);
+
+        // 3. Agregar panel al frame
+        frame.add(panel);
+        frame.setVisible(true);
+    }
+}
+

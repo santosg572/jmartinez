@@ -34,8 +34,8 @@ public class DesplegarTextoGUI {
 
           JPanel panel = new JPanel();
           panel.setBackground(Color.RED);
-//          panel.setBounds(100, 50, 150, 300);
-          panel.setSize(300, 400);
+          panel.setBounds(100, 50, 150, 300);
+//          panel.setSize(300, 400);
           panel.add(textArea); 
         // 5. Añadir el componente al marco
 //        frame.add(scrollPane, BorderLayout.CENTER);
