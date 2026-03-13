@@ -12,6 +12,7 @@ public class DesplegarTextoGUI {
 
         JFrame frame = new JFrame("Visualizador de Párrafo");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.getContentPane().setBackground(Color.BLACK);
 
         Toolkit toolkit = Toolkit.getDefaultToolkit();
 
@@ -63,14 +64,16 @@ String parrafo = "LCHAEA instrucciones \n" +
         JScrollPane scrollPane = new JScrollPane(textArea);
         scrollPane.setSize(screenSize.width, screenSize.height);
         scrollPane.setBounds(i1-sx/2, j1-sy/2, sx, sy);        
+        scrollPane.setBorder(new LineBorder(Color.RED, 3)); 
 
-        JPanel panel = new JPanel();
-        panel.setSize(screenSize.width, screenSize.height);
-        panel.setBackground(Color.BLACK);
-        panel.add(scrollPane);
+//        JPanel panel = new JPanel();
+//        panel.setSize(screenSize.width, screenSize.height);
+//        panel.setBounds(i1-sx/2, j1-sy/2, sx, sy);
+//        panel.setBackground(Color.BLACK);
+//        panel.add(scrollPane);
 
         // 5. Añadir el componente al marco
-        frame.add(panel);
+        frame.add(scrollPane);
         // 6. Hacer la ventana visible
         frame.setVisible(true);
     }
