@@ -61,11 +61,16 @@ String parrafo = "LCHAEA instrucciones \n" +
         int sx = 800;
         int sy = 420;
         JScrollPane scrollPane = new JScrollPane(textArea);
+        scrollPane.setSize(screenSize.width, screenSize.height);
         scrollPane.setBounds(i1-sx/2, j1-sy/2, sx, sy);        
-        scrollPane.setBackground(Color.BLACK);
+
+        JPanel panel = new JPanel();
+        panel.setSize(screenSize.width, screenSize.height);
+        panel.setBackground(Color.BLACK);
+        panel.add(scrollPane);
 
         // 5. Añadir el componente al marco
-        frame.add(scrollPane, BorderLayout.CENTER);
+        frame.add(panel);
         // 6. Hacer la ventana visible
         frame.setVisible(true);
     }
