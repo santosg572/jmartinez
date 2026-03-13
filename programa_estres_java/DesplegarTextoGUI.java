@@ -7,7 +7,8 @@ public class DesplegarTextoGUI {
     public static void main(String[] args) {
         // 1. Crear el marco (Ventana)
 
-        Font myFont = new Font("Serif", Font.BOLD, 16);
+        Font myFont = new Font("Arial", Font.BOLD, 20);
+//Serif
 
         JFrame frame = new JFrame("Visualizador de Párrafo");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -20,12 +21,29 @@ public class DesplegarTextoGUI {
         frame.setSize(screenSize.width, screenSize.height);
         frame.setLayout(null);
 
+        int i1 = screenSize.width/2;;
+        int j1 = screenSize.height/2;
+
         // 2. El párrafo de texto
-        String parrafo = "Este es un ejemplo de un párrafo de texto largo \n" +
-                         "desplegado en una interfaz gráfica de usuario (GUI) \n" +
-                         "utilizando Java Swing. El componente JTextArea permite \n" +
-                         "mostrar múltiples líneas de texto y se puede configurar \n" +
-                         "para que sea editable o no.";
+
+String parrafo = "LCHAEA instrucciones \n" +
+" \n" +
+"A continuacion se enlistan una serie de adjetivos. Por favor, para cada \n" + 
+"adjetivo seleccione una de las opciones de respuesta que mejor refleje \n" +
+"SU ESTADO DE ANIMO EN ESTE MOMENTO. No existen respuestas \n" +
+"correctas o incorrectas y lo importante es que responda a todas y cada \n" + 
+"una de las afirmaciones que se presenten de manera sincera y natural. \n" +
+" \n" +
+"Si usted siente que el adjetivo presentado no refleja en nada su sentir \n" +
+"con respecto a su estado de animo actual, seleccione la opcion no en \n" +
+"lo absoluto (opcion 1, pulgar izquierdo), por otra parte, si el adjetivo \n" +
+"refleja en mayor grado su estado de animo actual, seleccione la opcion \n" +
+"si con certeza (opcion 4, pulgar derecho). \n" +
+" \n" +
+"Usted puede seleccionar opciones intermedias de respuesta al seleccionar \n" +
+"las opciones no estoy seguro (opcion 2, indice izquierdo) y tal vez si \n" +
+"(opcion 3, indice derecho)"; 
+
 
         // 3. Crear JTextArea para el texto
 
@@ -40,11 +58,14 @@ public class DesplegarTextoGUI {
 
         // 4. Agregar un panel con scroll (barra de desplazamiento)
 
+        int sx = 800;
+        int sy = 420;
         JScrollPane scrollPane = new JScrollPane(textArea);
-        scrollPane.setBounds(50, 50, 600, 200);        
+        scrollPane.setBounds(i1-sx/2, j1-sy/2, sx, sy);        
+        scrollPane.setBackground(Color.BLACK);
+
         // 5. Añadir el componente al marco
         frame.add(scrollPane, BorderLayout.CENTER);
-
         // 6. Hacer la ventana visible
         frame.setVisible(true);
     }
