@@ -2,7 +2,6 @@ import java.awt.Font;
 import java.awt.Dimension;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 
 public class DesplegarTextoGUI {
     public static void main(String[] args) {
@@ -67,18 +66,16 @@ String parrafo = "LCHAEA instrucciones \n" +
         scrollPane.setBounds(i1-sx/2, j1-sy/2, sx, sy);        
         scrollPane.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 
-        JButton boton1=new JButton("Finalizar");
-        boton1.setBounds(i1-100, j1+sy/2+50,100,30);
-      // Añadir funcionalidad a los botones (ActionListener)
-        boton1.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-//                etiqueta.setText("¡Botón 1 presionado!");
-            }
-        });
+//        scrollPane.setBorder(new LineBorder(Color.RED, 3)); 
+
+//        JPanel panel = new JPanel();
+//        panel.setSize(screenSize.width, screenSize.height);
+//        panel.setBounds(i1-sx/2, j1-sy/2, sx, sy);
+//        panel.setBackground(Color.BLACK);
+//        panel.add(scrollPane);
 
         // 5. Añadir el componente al marco
         frame.add(scrollPane);
-        frame.add(boton1);
         // 6. Hacer la ventana visible
         frame.setVisible(true);
     }
